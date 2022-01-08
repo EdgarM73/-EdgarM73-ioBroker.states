@@ -1,0 +1,118 @@
+{
+	"common": {
+		"name": "states",
+		"version": "0.0.1",
+		"news": {
+			"0.0.1": {
+				"en": "initial release",
+				"de": "Erstveröffentlichung",
+				"ru": "Начальная версия",
+				"pt": "lançamento inicial",
+				"nl": "Eerste uitgave",
+				"fr": "Première version",
+				"it": "Versione iniziale",
+				"es": "Versión inicial",
+				"pl": "Pierwsze wydanie",
+				"zh-cn": "首次出版"
+			}
+		},
+		"title": "State Central",
+		"titleLang": {
+			"en": "State Central",
+			"de": "Landeszentrale",
+			"ru": "Центральный штат",
+			"pt": "Central do Estado",
+			"nl": "staat centraal",
+			"fr": "État central",
+			"it": "Stato Centrale",
+			"es": "centro del estado",
+			"pl": "Centralny stan",
+			"zh-cn": "国家中央"
+		},
+		"desc": {
+			"en": "here all kinds of states can be organized and monitored",
+			"de": "hier können alle möglichen Zustände organisiert und überwacht werden",
+			"ru": "здесь можно организовывать и контролировать все виды состояний",
+			"pt": "aqui todos os tipos de estados podem ser organizados e monitorados",
+			"nl": "hier kunnen allerlei staten worden georganiseerd en gecontroleerd",
+			"fr": "ici toutes sortes d'états peuvent être organisés et surveillés",
+			"it": "qui tutti i tipi di stati possono essere organizzati e monitorati",
+			"es": "aquí se pueden organizar y monitorear todo tipo de estados",
+			"pl": "tutaj można organizować i monitorować wszelkiego rodzaju stany",
+			"zh-cn": "在这里可以组织和监控各种状态"
+		},
+		"authors": ["EdgarM73 <edgar.miller@gmail.com>"],
+		"keywords": ["state message groups"],
+		"license": "MIT",
+		"platform": "Javascript/Node.js",
+		"main": "build/main.js",
+		"icon": "states.png",
+		"enabled": true,
+		"extIcon": "https://raw.githubusercontent.com/EdgarM73/ioBroker.states/main/admin/states.png",
+		"readme": "https://github.com/EdgarM73/ioBroker.states/blob/main/README.md",
+		"loglevel": "info",
+		"restartAdapters": ["vis"],
+		"localLinks": {
+			"_default": "%web_protocol%://%ip%:%web_port%/vis/edit.html"
+		},
+		"mode": "daemon",
+		"type": "logic",
+		"compact": true,
+		"connectionType": "local",
+		"dataSource": "poll",
+		"materialize": true,
+		"materializeTab": true,
+		"adminTab": {
+			"singleton": true,
+			"name": {
+				"en": "State Central",
+				"de": "Landeszentrale",
+				"ru": "Центральный штат",
+				"pt": "Central do Estado",
+				"nl": "staat centraal",
+				"fr": "État central",
+				"it": "Stato Centrale",
+				"es": "centro del estado",
+				"pl": "Centralny stan",
+				"zh-cn": "国家中央"
+			},
+			"link": "",
+			"fa-icon": "info"
+		},
+		"supportCustoms": true,
+		"dependencies": [
+			{
+				"js-controller": ">=2.0.0"
+			},
+			"vis"
+		]
+	},
+	"native": {
+		"option1": true,
+		"option2": "42"
+	},
+	"objects": [],
+	"instanceObjects": [
+		{
+			"_id": "info",
+			"type": "channel",
+			"common": {
+				"name": "Information"
+			},
+			"native": {}
+		},
+		{
+			"_id": "info.connection",
+			"type": "state",
+			"common": {
+				"role": "indicator.connected",
+				"name": "Device or service connected",
+				"type": "boolean",
+				"read": true,
+				"write": false,
+				"def": false
+			},
+			"native": {}
+		}
+	]
+}
